@@ -68,10 +68,10 @@ export interface AdminData extends RegistrationData {
 // Mock data for preview if GAS URL is not set
 const getInitialMockSettings = (): AppSettings => {
   const defaultSettings: AppSettings = {
-    namaSekolah: "SDN Harapan Bangsa",
+    namaSekolah: "UPTD SDN 014688 SIDOMUKTI",
     alamat: "Jl. Pendidikan No. 123, Kota Pelajar, Indonesia 12345",
     telepon: "(021) 1234-5678",
-    email: "info@sdnharapanbangsa.sch.id",
+    email: "info@sdn014688sidomukti.sch.id",
     deskripsi: "Mencetak generasi penerus bangsa yang cerdas, berakhlak mulia, dan siap menghadapi tantangan masa depan dengan pendidikan berkualitas.",
     statusPendaftaran: "Buka",
     persyaratanDaftarUlang: "1. Membawa Bukti Kelulusan yang dicetak\n2. Membawa Fotokopi Akta Kelahiran (2 lembar)\n3. Membawa Fotokopi Kartu Keluarga (2 lembar)\n4. Membawa Pas Foto 3x4 (4 lembar)\n5. Melakukan pembayaran administrasi awal",
@@ -81,7 +81,7 @@ const getInitialMockSettings = (): AppSettings => {
     tahunPendaftaran: new Date().getFullYear().toString(),
     koordinatSekolah: "-6.200000, 106.816666", // Default to Jakarta
     tanggalCutoffUsia: "", // Tanggal ditetapkan cutoff usia
-    sambutanKepalaSekolah: "Selamat datang di website resmi PPDB SDN Harapan Bangsa. Kami berkomitmen untuk memberikan pelayanan pendidikan terbaik bagi putra-putri Anda. Mari bergabung bersama kami untuk mencetak generasi penerus bangsa yang cerdas, berakhlak mulia, dan berprestasi.",
+    sambutanKepalaSekolah: "Selamat datang di website resmi SPMB UPTD SDN 014688 Sidomukti. Kami berkomitmen untuk memberikan pelayanan pendidikan terbaik bagi putra-putri Anda. Mari bergabung bersama kami untuk mencetak generasi penerus bangsa yang cerdas, berakhlak mulia, dan berprestasi.",
     fotoKepalaSekolah: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop",
     visiSekolah: "Menjadi sekolah dasar unggulan yang menghasilkan lulusan berakhlak mulia, cerdas, terampil, dan berwawasan lingkungan.",
     misiSekolah: "1. Menyelenggarakan pembelajaran yang aktif, inovatif, kreatif, efektif, dan menyenangkan (PAIKEM).\n2. Menanamkan nilai-nilai agama dan budi pekerti luhur dalam kehidupan sehari-hari.\n3. Mengembangkan potensi, bakat, dan minat siswa melalui kegiatan ekstrakurikuler.\n4. Menciptakan lingkungan sekolah yang bersih, sehat, dan asri.",
@@ -98,7 +98,7 @@ const getInitialMockSettings = (): AppSettings => {
       { id: "Kartu Keluarga", label: "Kartu Keluarga", type: "file", required: true },
       { id: "Akta Kelahiran", label: "Akta Kelahiran", type: "file", required: true }
     ],
-    panduanJudul: "Panduan Pendaftaran PPDB",
+    panduanJudul: "Panduan Pendaftaran SPMB",
     panduanDeskripsi: "Persiapkan dokumen berikut sebelum mulai mengisi formulir pendaftaran.",
     panduanPeringatan: "Pastikan semua dokumen di-scan atau difoto dengan jelas dan dapat terbaca. Format file yang disarankan adalah JPG, PNG, atau PDF dengan ukuran maksimal 2MB per file.",
     panduanDokumen: [
@@ -152,7 +152,7 @@ const getInitialMockData = (): AdminData[] => {
   return [
     {
       Timestamp: new Date().toISOString(),
-      'No Pendaftaran': "PPDB-2024-001",
+      'No Pendaftaran': "SPMB-2024-001",
       'Nama Lengkap': "Budi Santoso",
       'NIK': "1234567890123456",
       'Tempat Lahir': "Jakarta",
@@ -230,7 +230,7 @@ export const submitRegistration = async (data: RegistrationData) => {
     const newEntry: AdminData = {
       ...data,
       Timestamp: new Date().toISOString(),
-      'No Pendaftaran': `PPDB-${year}-${String(mockData.length + 1).padStart(3, '0')}`,
+      'No Pendaftaran': `SPMB-${year}-${String(mockData.length + 1).padStart(3, '0')}`,
       Status: 'Proses'
     };
     saveMockData([...mockData, newEntry]);
