@@ -28,10 +28,10 @@ const DEFAULT_FORM_FIELDS = [
 ];
 
 const DEFAULT_SETTINGS = {
-  namaSekolah: "SDN Harapan Bangsa",
+  namaSekolah: "UPTD SDN 014688 SIDOMUKTI",
   alamat: "Jl. Pendidikan No. 123, Kota Pelajar, Indonesia 12345",
   telepon: "(021) 1234-5678",
-  email: "info@sdnharapanbangsa.sch.id",
+  email: "info@sdn014688sidomukti.sch.id",
   deskripsi: "Mencetak generasi penerus bangsa yang cerdas, berakhlak mulia, dan siap menghadapi tantangan masa depan dengan pendidikan berkualitas.",
   statusPendaftaran: "Buka",
   formFields: JSON.stringify(DEFAULT_FORM_FIELDS)
